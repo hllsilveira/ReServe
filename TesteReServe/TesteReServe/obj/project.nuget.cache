@@ -1,10 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "Gs/nhC7mZziXK4noCm45h1btyOa/J5M4zuEUiHTLFlgqLli6UrT0VFCBOpV51zueXl3FL674e3VFxOfdPtEh9A==",
+  "dgSpecHash": "PtwZKYxHAcrkGAGW38sSRaWeMPP7K+ZtHeC4VPYtpRQiPUq0JIJ3eWQFm0abtIsmC/lwYdrKYHLAyoR/m1zFAQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Helton\\Desktop\\Teste\\ReServe\\TesteReServe\\TesteReServe\\TesteReServe.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Helton\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\Helton\\.nuget\\packages\\microsoft.netcore.app.host.win-x86\\3.1.9\\microsoft.netcore.app.host.win-x86.3.1.9.nupkg.sha512",
     "C:\\Users\\Helton\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.8\\microsoft.aspnetcore.app.ref.3.1.8.nupkg.sha512",
     "C:\\Users\\Helton\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",

@@ -1,8 +1,0 @@
-{
-  "runtimeOptions": {
-    "additionalProbingPaths": [
-      "C:\\Users\\Helton\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Helton\\.nuget\\packages"
-    ]
-  }
-}

@@ -8,7 +8,6 @@ C:\Users\Helton\Desktop\Teste\ReServe\TesteReServe\TesteReServe\bin\Debug\netcor
 C:\Users\Helton\Desktop\Teste\ReServe\TesteReServe\TesteReServe\bin\Debug\netcoreapp3.1\TesteReServe.pdb
 C:\Users\Helton\Desktop\Teste\ReServe\TesteReServe\TesteReServe\bin\Debug\netcoreapp3.1\TesteReServe.Views.dll
 C:\Users\Helton\Desktop\Teste\ReServe\TesteReServe\TesteReServe\bin\Debug\netcoreapp3.1\TesteReServe.Views.pdb
-C:\Users\Helton\Desktop\Teste\ReServe\TesteReServe\TesteReServe\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\Helton\Desktop\Teste\ReServe\TesteReServe\TesteReServe\obj\Debug\netcoreapp3.1\TesteReServe.csprojAssemblyReference.cache
 C:\Users\Helton\Desktop\Teste\ReServe\TesteReServe\TesteReServe\obj\Debug\netcoreapp3.1\TesteReServe.AssemblyInfoInputs.cache
 C:\Users\Helton\Desktop\Teste\ReServe\TesteReServe\TesteReServe\obj\Debug\netcoreapp3.1\TesteReServe.AssemblyInfo.cs
@@ -31,7 +30,7 @@ C:\Users\Helton\Desktop\Teste\ReServe\TesteReServe\TesteReServe\obj\Debug\netcor
 C:\Users\Helton\Desktop\Teste\ReServe\TesteReServe\TesteReServe\obj\Debug\netcoreapp3.1\TesteReServe.RazorTargetAssemblyInfo.cache
 C:\Users\Helton\Desktop\Teste\ReServe\TesteReServe\TesteReServe\obj\Debug\netcoreapp3.1\TesteReServe.RazorTargetAssemblyInfo.cs
 C:\Users\Helton\Desktop\Teste\ReServe\TesteReServe\TesteReServe\obj\Debug\netcoreapp3.1\TesteReServe.Views.pdb
-C:\Users\Helton\Desktop\Teste\ReServe\TesteReServe\TesteReServe\obj\Debug\netcoreapp3.1\TesteReServe.csproj.CopyComplete
 C:\Users\Helton\Desktop\Teste\ReServe\TesteReServe\TesteReServe\obj\Debug\netcoreapp3.1\TesteReServe.dll
 C:\Users\Helton\Desktop\Teste\ReServe\TesteReServe\TesteReServe\obj\Debug\netcoreapp3.1\TesteReServe.pdb
 C:\Users\Helton\Desktop\Teste\ReServe\TesteReServe\TesteReServe\obj\Debug\netcoreapp3.1\TesteReServe.genruntimeconfig.cache
+C:\Users\Helton\Desktop\Teste\ReServe\TesteReServe\TesteReServe\obj\Debug\netcoreapp3.1\TesteReServe.csproj.CopyComplete

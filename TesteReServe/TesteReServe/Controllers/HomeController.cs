@@ -22,7 +22,7 @@ namespace ReServe.Controllers
         public IActionResult Index()
         {
             var api = new UsaApiCovid(new ApiCovidGetPostMan());
-            List<CovidPais> dados = api.RankingCovid();
+            IEnumerable<CovidPais> dados = api.RankingCovid();
 
             return View(dados);
         }

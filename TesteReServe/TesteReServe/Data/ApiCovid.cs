@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using Newtonsoft.Json;
-using System.Net;
-using System.IO;
 using TesteReServe.Models;
+using System.Text.Json;
+using System.Net.Http.Headers;
+using System.Net.Http;
 
 namespace TesteReServe.Data
 {
@@ -18,7 +16,7 @@ namespace TesteReServe.Data
             _apicovid = apicovid;
         }
 
-        public List<CovidPais> RankingCovid()
+        public IEnumerable<CovidPais> RankingCovid()
         {
             return _apicovid.RankingCovid();
         }
@@ -27,38 +25,71 @@ namespace TesteReServe.Data
 
     public interface IApiCovid
     {
-        List<CovidPais> RankingCovid();
+        IEnumerable<CovidPais> RankingCovid();
 
     }
 
+    
     public class ApiCovidGetPostMan : IApiCovid
     {
-        public List<CovidPais> RankingCovid()
+        public static List<CovidPais> dados = new List<CovidPais>();
+
+        public IEnumerable<CovidPais> RankingCovid()
         {
-            var requisicaoWeb = WebRequest.CreateHttp("https://api.covid19api.com/summary");
-            requisicaoWeb.Method = "GET";
-            requisicaoWeb.UserAgent = "ReServe";
+            dados.Clear();
 
-            List<Models.CovidPais> dados = new List<CovidPais>();
-
-            using (var resposta = requisicaoWeb.GetResponse())
-            {
-                var streamDados = resposta.GetResponseStream();
-                StreamReader reader = new StreamReader(streamDados);
-                object objResponse = reader.ReadToEnd();
-
-                //obtendo json
-                var post = JsonConvert.DeserializeObject <Models.Countries>(objResponse.ToString());                
-            
-                streamDados.Close();
-                resposta.Close();
-            }
-
+           ExecutarAsync();
 
             if (dados.Count > 0)
-                return (List<Models.CovidPais>)dados.OrderByDescending(x => x.TotalConfirmed).Take(10);
+            {
+                IEnumerable<CovidPais> query = dados.OrderByDescending(x => x.Ativos);
+
+                return query.Take(10);
+            }
             else
                 return dados;
         }
+
+        void ExecutarAsync()
+        {
+            using (var cliente = new HttpClient())
+            {
+                cliente.DefaultRequestHeaders.Accept.Clear();
+                cliente.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                // HTTP GET
+                HttpResponseMessage response = cliente.GetAsync("https://api.covid19api.com/summary").Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    var json = response.Content.ReadAsStringAsync().Result.ToString();
+
+                    //deserializando obj json
+                    var obj = JsonSerializer.Deserialize<Rootobject>(json);                  
+
+                    //austando dados com dados ativos
+                    dados.Clear(); int id = 1;
+                    foreach (var item in obj.Countries)
+                    {
+                        CovidPais i = new CovidPais();
+                        i.Id = id;
+                        i.Country = item.Country;
+                        i.Ativos = (item.TotalConfirmed - item.TotalRecovered);
+
+                        if (i.Ativos < 0)
+                            i.Ativos = 0;
+
+                        dados.Add(i);
+                        id++;
+                    }
+
+                }
+            }
+        }
+
+
     }
+
+    
+
+   
 }
